@@ -7,7 +7,13 @@ class PostService {
         } catch (error) {
             console.log(error)
         }
+    }
+
+   async get(id) {
+        const result = await http.get(`posts/${id}`)
+        console.log(result.data);
         
+        return result.data;
     }
 }
 

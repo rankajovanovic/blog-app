@@ -3,7 +3,7 @@
       <ul class="list-group list-group-flush">
           <li v-for="post in posts" :key="post.id" class="list-group-item">
              <h3>{{post.title}}</h3>
-             <p>{{post.text}}</p>
+             <router-link :to="{ name: 'SinglePost', params: {id:post.id} }" type="button" class="btn btn-primary" tag="button">View post</router-link>
           </li>
       </ul>
   </div>
